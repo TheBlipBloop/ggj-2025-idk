@@ -34,10 +34,16 @@ public class Player : MonoBehaviour
 	protected float jumpForceMax = 10f;
 
 	[SerializeField]
-	protected float moveSpeed = 10f;
+	protected float moveSpeed = 20f;
+
+	[SerializeField]
+	protected float maxMoveSpeed = 10f;
 
 	[SerializeField]
 	protected float changeDirectionSpeedScalar = 2.0f;
+
+	[SerializeField]
+	protected float airSpeedScalar = 0.75f;
 
 	[SerializeField]
 	protected float frictionSpeed = 8.0f;
@@ -85,14 +91,20 @@ public class Player : MonoBehaviour
 	{
 		UpdateGrounded();
 
-		if (moveInput.x > 0 == body.linearVelocityX > 0)
+		float moveSpeedScale = 1.0f;
+
+		if (!OnGround())
 		{
-			body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed;
+			moveSpeedScale *= airSpeedScalar;
 		}
-		else
+
+		if (moveInput.x > 0 != body.linearVelocityX > 0)
 		{
-			body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed * changeDirectionSpeedScalar;
+			moveSpeedScale *= changeDirectionSpeedScalar;
 		}
+
+		body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed * moveSpeedScale;
+		body.linearVelocityX = Mathf.Clamp(body.linearVelocityX, -maxMoveSpeed, maxMoveSpeed);
 
 		if (Mathf.Abs(moveInput.x) < 0.1f)
 		{

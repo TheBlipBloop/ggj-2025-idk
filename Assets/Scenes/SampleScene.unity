@@ -532,6 +532,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: moveSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: jumpForceMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: jumpForceMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.525
+      objectReference: {fileID: 0}
     - target: {fileID: 3905860368173611664, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
       propertyPath: m_Name
       value: Player
