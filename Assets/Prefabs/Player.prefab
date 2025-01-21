@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1647000899653394372}
   - component: {fileID: 1713271058075759439}
   - component: {fileID: 952740342608753185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
+  shrinkPerSecond: 0.15
+  graphics: {fileID: 3682148916418702184}
+  collision: {fileID: 6446917349947269056}
+  bubbleSizeToGraphicSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4
+      value: 4
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1713271058075759439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +93,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  groundCheckDistance: 0.525
+  groundCheckDistance: 0.02
   jumpForceMin: 5
   jumpForceMax: 8
   moveSpeed: 25
@@ -76,6 +103,78 @@ MonoBehaviour:
   frictionSpeed: 8
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  moveSpeedScalarByBubbleSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.1
+      value: 2
+      inSlope: 0
+      outSlope: -0.41025642
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4
+      value: 0.4
+      inSlope: -0.41025642
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  gravityScaleByBubbleSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.5
+      value: 2
+      inSlope: 0
+      outSlope: -0.4857143
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4
+      value: 0.3
+      inSlope: -0.4857143
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  airSpeedScalarByBubbleSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 2
+      value: 1
+      inSlope: 0
+      outSlope: -0.4
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4
+      value: 0.2
+      inSlope: -0.4
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!50 &952740342608753185
 Rigidbody2D:
   serializedVersion: 5
@@ -113,7 +212,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6446917349947269056}
   - component: {fileID: 1185354753985885219}
-  m_Layer: 0
+  - component: {fileID: 6286352880344103056}
+  m_Layer: 3
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +242,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9148899252362615281}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -181,6 +281,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!58 &6286352880344103056
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148899252362615281}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1001 &7926675761145679675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,9 +325,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7452513219341946152}
     m_Modifications:
+    - target: {fileID: 2669555583659486579, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5286592348314446938, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_Name
       value: PlayerGraphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286592348314446938, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493034734494268264, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6708300167154525267, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_LocalPosition.x

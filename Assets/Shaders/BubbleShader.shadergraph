@@ -568,10 +568,10 @@
     "m_Guid": {
         "m_GuidSerialized": "d8d1d86f-9b7c-4556-83a1-405b9bbf1a25"
     },
-    "m_Name": "LightDirection",
+    "m_Name": "BubbleLightDirection",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "LightDirection",
-    "m_DefaultReferenceName": "_LightDirection",
+    "m_RefNameGeneratedByDisplayName": "BubbleLightDirection",
+    "m_DefaultReferenceName": "_BubbleLightDirection",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2554,7 +2554,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "c167f7ba4bfa4c65a76b2681dc731ae7",
     "m_Id": 0,
-    "m_DisplayName": "LightDirection",
+    "m_DisplayName": "BubbleLightDirection",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

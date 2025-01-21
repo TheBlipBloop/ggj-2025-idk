@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 	protected LayerMask groundMask = 0;
 
 	[SerializeField]
-	protected float groundCheckDistance = 1.0f;
+	protected float groundCheckDistance = 0.05f;
 
 	[SerializeField]
 	protected float jumpForceMin = 5f;
@@ -60,6 +60,16 @@ public class Player : MonoBehaviour
 
 	private float lastGroundedTime = float.NegativeInfinity;
 
+	[Header("Bubble Scale")]
+
+	[SerializeField]
+	protected AnimationCurve moveSpeedScalarByBubbleSize = AnimationCurve.Linear(0.1f, 2f, 4f, 0.4f);
+
+	[SerializeField]
+	protected AnimationCurve gravityScaleByBubbleSize = AnimationCurve.Linear(0.5f, 2f, 4f, 0.3f);
+
+	[SerializeField]
+	protected AnimationCurve airSpeedScalarByBubbleSize = AnimationCurve.Linear(2f, 1f, 4f, 0.2f);
 
 	protected virtual void Start()
 	{
@@ -97,7 +107,7 @@ public class Player : MonoBehaviour
 
 		if (!OnGround())
 		{
-			moveSpeedScale *= airSpeedScalar;
+			moveSpeedScale *= GetBaseAirMoveSpeedScalar();
 		}
 
 		if (moveInput.x > 0 != body.linearVelocityX > 0)
@@ -105,7 +115,7 @@ public class Player : MonoBehaviour
 			moveSpeedScale *= changeDirectionSpeedScalar;
 		}
 
-		body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed * moveSpeedScale;
+		body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * GetBaseMoveSpeed() * moveSpeedScale;
 		body.linearVelocityX = Mathf.Clamp(body.linearVelocityX, -maxMoveSpeed, maxMoveSpeed);
 
 		if (Mathf.Abs(moveInput.x) < 0.1f)
@@ -124,11 +134,13 @@ public class Player : MonoBehaviour
 			body.linearVelocityY = jumpForceMin;
 			print("Cutting jump!");
 		}
+
+		body.gravityScale = GetGravityScale();
 	}
 
 	protected void UpdateGrounded()
 	{
-		RaycastHit2D groundHit = Physics2D.Raycast(body.position, Vector2.down, groundCheckDistance, groundMask.value);
+		RaycastHit2D groundHit = Physics2D.Raycast(body.position, Vector2.down, GetBubbleRadius() + groundCheckDistance, groundMask.value);
 
 		if (groundHit.collider)
 		{
@@ -154,5 +166,27 @@ public class Player : MonoBehaviour
 	protected float GetBubbleSize()
 	{
 		return bubble.GetBubbleSize();
+	}
+
+	protected float GetBubbleRadius()
+	{
+		return bubble.GetBubbleRadius();
+	}
+
+	// Scaling by bubble size:
+
+	private float GetBaseMoveSpeed()
+	{
+		return moveSpeed * moveSpeedScalarByBubbleSize.Evaluate(GetBubbleSize());
+	}
+
+	private float GetBaseAirMoveSpeedScalar()
+	{
+		return airSpeedScalar * airSpeedScalarByBubbleSize.Evaluate(GetBubbleSize());
+	}
+
+	private float GetGravityScale()
+	{
+		return gravityScaleByBubbleSize.Evaluate(GetBubbleSize());
 	}
 }
