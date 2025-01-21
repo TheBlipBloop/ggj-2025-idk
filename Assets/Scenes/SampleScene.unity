@@ -532,30 +532,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: groundMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: jumpAction.m_Name
-      value: Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: moveAction.m_Name
-      value: Move
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 9328e803-aaa8-400b-be9b-8d02123cffd0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713271058075759439, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Move
-      objectReference: {fileID: 0}
     - target: {fileID: 3905860368173611664, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
       propertyPath: m_Name
       value: Player

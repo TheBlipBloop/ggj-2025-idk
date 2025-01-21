@@ -37,6 +37,12 @@ public class Player : MonoBehaviour
 	protected float moveSpeed = 10f;
 
 	[SerializeField]
+	protected float changeDirectionSpeedScalar = 2.0f;
+
+	[SerializeField]
+	protected float frictionSpeed = 8.0f;
+
+	[SerializeField]
 	protected float coyoteTime = 0.1f;
 
 	[SerializeField]
@@ -79,7 +85,19 @@ public class Player : MonoBehaviour
 	{
 		UpdateGrounded();
 
-		body.AddForceX(moveInput.x * moveSpeed);
+		if (moveInput.x > 0 == body.linearVelocityX > 0)
+		{
+			body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed;
+		}
+		else
+		{
+			body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * moveSpeed * changeDirectionSpeedScalar;
+		}
+
+		if (Mathf.Abs(moveInput.x) < 0.1f)
+		{
+			body.linearVelocityX = Mathf.MoveTowards(body.linearVelocityX, 0f, frictionSpeed * Time.fixedDeltaTime);
+		}
 
 		if (RequestingJump() && OnGround())
 		{
