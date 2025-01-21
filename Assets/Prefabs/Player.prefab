@@ -66,11 +66,14 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  groundCheckDistance: 0.6
+  groundCheckDistance: 0.525
   jumpForceMin: 5
-  jumpForceMax: 10
-  moveSpeed: 10
+  jumpForceMax: 8
+  moveSpeed: 25
+  maxMoveSpeed: 10
   changeDirectionSpeedScalar: 2
+  airSpeedScalar: 0.75
+  frictionSpeed: 8
   coyoteTime: 0.1
   jumpBufferTime: 0.1
 --- !u!50 &952740342608753185
@@ -99,7 +102,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &9148899252362615281
 GameObject:
   m_ObjectHideFlags: 0

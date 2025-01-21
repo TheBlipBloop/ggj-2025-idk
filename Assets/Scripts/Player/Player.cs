@@ -64,6 +64,8 @@ public class Player : MonoBehaviour
 	protected virtual void Start()
 	{
 		BindInputActions();
+
+		body.freezeRotation = true;
 	}
 
 	private void BindInputActions()
@@ -137,7 +139,6 @@ public class Player : MonoBehaviour
 	protected bool CanceledJump()
 	{
 		return jumpAction.ReadValue<float>() < 0.5f;
-		// return jumpAction.WasReleasedThisFrame();
 	}
 
 	protected bool OnGround()
