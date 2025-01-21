@@ -28,7 +28,7 @@ public class ChangeBubbleSize : MonoBehaviour
 			return;
 		}
 
-		targetBubble.UpdateBubbleSize(targetBubble.GetBubbleSize() + amount);
+		targetBubble.UpdateBubbleAir(targetBubble.GetBubbleAir() + amount);
 	}
 
 	public void StartAddingBubbleSize(float amountPerSecond)

@@ -3,7 +3,13 @@ using UnityEngine;
 public class Bubble : MonoBehaviour
 {
 	[SerializeField]
-	protected float size = 1.0f;
+	protected float air = 1.0f;
+
+	[SerializeField]
+	protected float minAir = 0.2f;
+
+	[SerializeField]
+	protected float maxAir = 4.5f;
 
 	[SerializeField]
 	protected float shrinkPerSecond = 0.15f;
@@ -19,12 +25,12 @@ public class Bubble : MonoBehaviour
 
 	private void Update()
 	{
-		UpdateBubbleSize(GetBubbleSize() - shrinkPerSecond * Time.deltaTime);
+		UpdateBubbleAir(GetBubbleAir() - shrinkPerSecond * Time.deltaTime);
 	}
 
-	public void UpdateBubbleSize(float newSize)
+	public void UpdateBubbleAir(float newAir)
 	{
-		size = newSize;
+		air = Mathf.Clamp(newAir, minAir, maxAir);
 
 		float newGraphicSize = GetBubbleRadius() * 2f;
 		graphics.localScale = new Vector3(newGraphicSize, newGraphicSize, 1f);
@@ -33,13 +39,13 @@ public class Bubble : MonoBehaviour
 	}
 
 	// bad names fixme
-	public float GetBubbleSize()
+	public float GetBubbleAir()
 	{
-		return size;
+		return air;
 	}
 
 	public float GetBubbleRadius()
 	{
-		return bubbleSizeToGraphicSizeCurve.Evaluate(GetBubbleSize()) / 2f;
+		return bubbleSizeToGraphicSizeCurve.Evaluate(GetBubbleAir()) / 2f;
 	}
 }

@@ -12,7 +12,7 @@ public class BubbleSource : MonoBehaviour
 	{
 		if (currentBubble)
 		{
-			currentBubble.UpdateBubbleSize(currentBubble.GetBubbleSize() + bubblesPerSecond * Time.deltaTime);
+			currentBubble.UpdateBubbleAir(currentBubble.GetBubbleAir() + bubblesPerSecond * Time.deltaTime);
 		}
 	}
 

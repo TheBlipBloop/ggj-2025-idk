@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
 
 	protected float GetBubbleSize()
 	{
-		return bubble.GetBubbleSize();
+		return bubble.GetBubbleAir();
 	}
 
 	protected float GetBubbleRadius()

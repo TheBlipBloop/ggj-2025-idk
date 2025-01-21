@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f4aa9e0d76201fc9d6e7c524b9e69a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
+  air: 1
+  minAir: 0.2
+  maxAir: 4.5
   shrinkPerSecond: 0.15
   graphics: {fileID: 3682148916418702184}
   collision: {fileID: 6446917349947269056}
@@ -134,16 +136,16 @@ MonoBehaviour:
       time: 0.5
       value: 2
       inSlope: 0
-      outSlope: -0.4857143
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 4
-      value: 0.3
+      time: 3
+      value: 0.2
       inSlope: -0.4857143
-      outSlope: 0
+      outSlope: -0.4857143
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -158,16 +160,16 @@ MonoBehaviour:
       time: 2
       value: 1
       inSlope: 0
-      outSlope: -0.4
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 4
-      value: 0.2
+      value: 0.1
       inSlope: -0.4
-      outSlope: 0
+      outSlope: -0.4
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
