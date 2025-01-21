@@ -548,6 +548,34 @@ PrefabInstance:
       propertyPath: groundCheckDistance
       value: 0.525
       objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833447715512096694, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a1f605c34b26504ca158511e6a141e6, type: 2}
     - target: {fileID: 3905860368173611664, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
       propertyPath: m_Name
       value: Player
