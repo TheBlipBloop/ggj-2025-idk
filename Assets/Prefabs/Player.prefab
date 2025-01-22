@@ -112,16 +112,16 @@ MonoBehaviour:
       time: 0.1
       value: 2
       inSlope: 0
-      outSlope: -0.41025642
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 4
-      value: 0.4
+      value: 0.1
       inSlope: -0.41025642
-      outSlope: 0
+      outSlope: -0.41025642
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -142,8 +142,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.966873
+      outSlope: -0.966873
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.746142
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 3
-      value: 0.2
+      value: 0.1
       inSlope: -0.4857143
       outSlope: -0.4857143
       tangentMode: 0
@@ -191,7 +200,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: b0c2b66002e197f8888926b2b0bceb0b, type: 2}
   m_IncludeLayers:

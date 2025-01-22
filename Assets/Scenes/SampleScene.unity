@@ -1074,6 +1074,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
+      propertyPath: orthographic size
+      value: 5.46875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.001017294
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.9969481
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.9985735
+      objectReference: {fileID: 0}
     - target: {fileID: 6942084135810556398, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_Name
       value: Main Camera
