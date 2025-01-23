@@ -336,21 +336,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7452513219341946152}
     m_Modifications:
-    - target: {fileID: 2669555583659486579, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5286592348314446938, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_Name
       value: PlayerGraphics
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286592348314446938, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5493034734494268264, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6708300167154525267, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_LocalPosition.x
