@@ -52,7 +52,7 @@ MonoBehaviour:
   minAir: 0.2
   maxAir: 4.5
   shrinkPerSecond: 0.15
-  graphics: {fileID: 3682148916418702184}
+  graphics: {fileID: 1345978893658953213}
   collision: {fileID: 6446917349947269056}
   bubbleSizeToGraphicSizeCurve:
     serializedVersion: 2
@@ -385,6 +385,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+--- !u!4 &1345978893658953213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8983789791707306694, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+  m_PrefabInstance: {fileID: 7926675761145679675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3682148916418702184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6708300167154525267, guid: 0e3defe5154322289a96c6053820605f, type: 3}
