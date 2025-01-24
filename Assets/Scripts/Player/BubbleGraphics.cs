@@ -32,6 +32,8 @@ public class BubbleGraphics : MonoBehaviour
 	void Start()
 	{
 		morphTarget.SetParent(null);
+		morphSpringX.SetValue(transform.position.x);
+		morphSpringY.SetValue(transform.position.y);
 	}
 
 	// Update is called once per frame

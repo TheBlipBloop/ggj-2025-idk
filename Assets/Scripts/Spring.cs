@@ -40,6 +40,11 @@ public class Spring
 		springTarget = target;
 	}
 
+	public void SetValue(float newValue)
+	{
+		value = newValue;
+	}
+
 	public float GetValue()
 	{
 		return value;

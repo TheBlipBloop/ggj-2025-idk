@@ -100,11 +100,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a878697cd2c5d434a2b0fe3152ee069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   bubbleRenderer: {fileID: 5769446793748818212}
   morphTarget: {fileID: 8075112837377298575}
   radiusScale: 0.45
-  morphScale: 0.45
+  morphScale: 0.85
   morphTrackSpeed: 2
+  morphSpringX:
+    value: 0
+    springForce: 140
+    springDampening: 30
+    springVelocity: 0
+    springTarget: 0
+  morphSpringY:
+    value: 0
+    springForce: 140
+    springDampening: 30
+    springVelocity: 0
+    springTarget: 0
 --- !u!1 &5286592348314446938
 GameObject:
   m_ObjectHideFlags: 0
