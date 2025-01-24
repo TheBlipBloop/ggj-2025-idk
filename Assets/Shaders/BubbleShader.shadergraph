@@ -823,7 +823,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10200,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10202,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
             "m_Guid": ""
         },
         "preventRotation": false
@@ -896,8 +896,8 @@
     "m_ObjectId": "0291af50dd424de9a007b5276ffb8c9b",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -1336.0001220703125,
-        "y": 953.0001220703125
+        "x": -1336.0,
+        "y": 953.0
     }
 }
 
@@ -4955,7 +4955,7 @@
     "m_Title": "Texture",
     "m_Position": {
         "x": -3023.0,
-        "y": -238.0
+        "y": -238.00001525878907
     }
 }
 

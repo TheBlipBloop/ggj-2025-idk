@@ -132,7 +132,6 @@ public class Player : MonoBehaviour
 		if (CanceledJump() && body.linearVelocityY > jumpForceMin)
 		{
 			body.linearVelocityY = jumpForceMin;
-			print("Cutting jump!");
 		}
 
 		body.gravityScale = GetGravityScale();
@@ -193,5 +192,10 @@ public class Player : MonoBehaviour
 	public Bubble GetBubble()
 	{
 		return bubble;
+	}
+
+	public Rigidbody2D GetBody()
+	{
+		return body;
 	}
 }

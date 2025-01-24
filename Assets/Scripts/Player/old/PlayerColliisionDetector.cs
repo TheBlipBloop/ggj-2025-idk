@@ -13,22 +13,14 @@ public class PlayerColliisionDetector : MonoBehaviour
 	[SerializeField]
 	protected UnityEvent<Player, Bubble> playerStay;
 
-	[SerializeField]
-	protected LayerMask playerLayerMask;
-
 	private void OnCollisionEnter2D(Collision2D collision2D)
 	{
-		print("collision enter!!");
 		if (!IsPlayer(collision2D))
 		{
 			return;
 		}
-		print("collision player enter!!");
 
-		// get player object using its child collider 
-		GameObject playerGameObject = collision2D.transform.parent.gameObject;
-
-		Player player = playerGameObject.GetComponent<Player>();
+		Player player = collision2D.gameObject.GetComponent<Player>();
 		Bubble bubble = player.GetBubble();
 
 		playerEnter?.Invoke(player, bubble);
@@ -41,10 +33,7 @@ public class PlayerColliisionDetector : MonoBehaviour
 			return;
 		}
 
-		// get player object using its child collider 
-		GameObject playerGameObject = collision2D.transform.parent.gameObject;
-
-		Player player = playerGameObject.GetComponent<Player>();
+		Player player = collision2D.gameObject.GetComponent<Player>();
 		Bubble bubble = player.GetBubble();
 
 		playerExit?.Invoke(player, bubble);
@@ -57,10 +46,7 @@ public class PlayerColliisionDetector : MonoBehaviour
 			return;
 		}
 
-		// get player object using its child collider 
-		GameObject playerGameObject = collision2D.transform.parent.gameObject;
-
-		Player player = playerGameObject.GetComponent<Player>();
+		Player player = collision2D.gameObject.GetComponent<Player>();
 		Bubble bubble = player.GetBubble();
 
 		playerStay?.Invoke(player, bubble);
@@ -68,6 +54,6 @@ public class PlayerColliisionDetector : MonoBehaviour
 
 	private bool IsPlayer(Collision2D collision2D)
 	{
-		return collision2D != null && collision2D.gameObject && collision2D.gameObject.layer == playerLayerMask;
+		return collision2D != null && collision2D.gameObject && collision2D.gameObject.layer == 3;
 	}
 }
