@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4ecfb704a280f2e8100df06673a608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 35
 --- !u!61 &361827239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1080,7 +1081,7 @@ GameObject:
   - component: {fileID: 1369736055}
   - component: {fileID: 1369736054}
   - component: {fileID: 1369736056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,11 +2853,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa55a224a5294eae49d9e3df9faba7b4, type: 3}
---- !u!20 &1833235010 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-  m_PrefabInstance: {fileID: 5273395519931342916}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870868848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,10 +3021,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6454916327006758994, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1833235010}
     - target: {fileID: 7452513219341946152, guid: 9dcdecfece9c7b3499f6c1a45e0385b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.035
@@ -3185,11 +3177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: orthographic size
-      value: 3.625
+      value: 4.1875
       objectReference: {fileID: 0}
     - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.0008071025
+      value: 0.0012468828
       objectReference: {fileID: 0}
     - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -3197,11 +3189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9975787
+      value: 0.99750626
       objectReference: {fileID: 0}
     - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.99856526
+      value: 0.99813783
       objectReference: {fileID: 0}
     - target: {fileID: 6942084135810556398, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_Name
