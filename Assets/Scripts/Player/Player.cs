@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
 		return jumpAction.ReadValue<float>() < 0.5f;
 	}
 
-	protected bool OnGround()
+	public bool OnGround()
 	{
 		return Time.time - lastGroundedTime < coyoteTime;
 	}

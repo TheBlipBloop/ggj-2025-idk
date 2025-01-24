@@ -60,8 +60,8 @@ Material:
     - _BubbleWidth: 1
     - _Color_Contrast: 0.38
     - _Fresnel_Effect: 1.38
-    - _MorphTarget_0_Size: 1.35
-    - _MorphTarget_0_Strength: 1.25
+    - _MorphTarget_0_Size: 1.7
+    - _MorphTarget_0_Strength: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

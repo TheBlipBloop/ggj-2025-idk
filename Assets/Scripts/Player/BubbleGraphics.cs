@@ -5,6 +5,9 @@ using UnityEngine;
 public class BubbleGraphics : MonoBehaviour
 {
 	[SerializeField]
+	protected Player player;
+
+	[SerializeField]
 	protected Renderer bubbleRenderer;
 
 	[SerializeField]
@@ -36,27 +39,25 @@ public class BubbleGraphics : MonoBehaviour
 	{
 		float radius = transform.lossyScale.x * radiusScale;
 
-		// TODO : Springy
 		morphSpringX.SetTarget(transform.position.x);
-		morphSpringY.SetTarget(transform.position.y);
+		if (player.OnGround())
+		{
+			morphSpringY.SetTarget(transform.position.y + radius / 3f);
+		}
+		else
+		{
+			morphSpringY.SetTarget(transform.position.y);
+		}
+		Vector3 morphTargetPosition = new Vector3(morphSpringX.GetValue(), morphSpringY.GetValue(), 0f);
 
-		// morphX.SetTarget(transform.position.x);
-		morphTarget.position = new Vector3(morphSpringX.GetValue(), morphSpringY.GetValue(), 0f);
+		Vector3 offset = morphTargetPosition - transform.position;
+		offset = Vector3.ClampMagnitude(offset, radius * morphScale);
 
-
-
-		// morphTarget.transform.position = Vector3.Lerp(morphTarget.transform.position, transform.position + Vector3.up * radius, Time.deltaTime * morphTrackSpeed);
-
-		// Vector3 offset = morphTarget.position - transform.position;
-		// offset = Vector3.ClampMagnitude(offset, radius * morphScale);
-
-		// morphTarget.position = transform.position + offset;
+		morphTarget.position = transform.position + offset;
 
 		Vector3 morphPosition = transform.InverseTransformPoint(morphTarget.position);
 		bubbleRenderer.material.SetVector("_MorphTarget_0", morphPosition);
 
-
-		// morphX.Update(Time.deltaTime);
 		morphSpringX.Update(Time.deltaTime);
 		morphSpringY.Update(Time.deltaTime);
 	}

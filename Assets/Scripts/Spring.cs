@@ -1,7 +1,5 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.Interactions;
+// MESSY!
 
 [System.Serializable]
 public class Spring
@@ -31,10 +29,10 @@ public class Spring
 		float acceleration = springVelocity;
 		float delta = springTarget - value;
 
-		springVelocity += deltaTime * delta;
-		springVelocity = Mathf.MoveTowards(springVelocity, 0, springDampening * Time.deltaTime);
-
+		springVelocity += deltaTime * delta * springForce;
 		value += deltaTime * springVelocity;
+
+		springVelocity = Mathf.MoveTowards(springVelocity, 0, springDampening * Time.deltaTime);
 	}
 
 	public void SetTarget(float target)
