@@ -11,9 +11,9 @@ public class ChangeBubbleSize : MonoBehaviour
 		targetBubble = bubble;
 	}
 
-	public void SetBubble(GameObject bubble, Collision2D collision2D)
+	public void SetBubble(Player player, Bubble bubble)
 	{
-		SetBubble(bubble.GetComponent<Bubble>());
+		SetBubble(bubble);
 	}
 
 	public void ClearBubble()
