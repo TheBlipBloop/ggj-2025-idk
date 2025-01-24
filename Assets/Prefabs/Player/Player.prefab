@@ -223,6 +223,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  characterTransform: {fileID: 346712544345015740}
+  characterRotation:
+    value: 0
+    springForce: 16
+    springDampening: 90
+    springVelocity: 0
+    springMaxVelocityMagnitude: 200
+    springTarget: 0
 --- !u!50 &952740342608753185
 Rigidbody2D:
   serializedVersion: 5
@@ -393,6 +401,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+--- !u!4 &346712544345015740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7696353397637827207, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+  m_PrefabInstance: {fileID: 7926675761145679675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1345978893658953213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8983789791707306694, guid: 0e3defe5154322289a96c6053820605f, type: 3}

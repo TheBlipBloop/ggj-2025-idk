@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -71,6 +72,14 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	protected AnimationCurve airSpeedScalarByBubbleSize = AnimationCurve.Linear(2f, 1f, 4f, 0.2f);
 
+	[Header("Misc")]
+
+	[SerializeField]
+	protected Transform characterTransform;
+
+	[SerializeField]
+	protected Spring characterRotation;
+
 	protected virtual void Start()
 	{
 		BindInputActions();
@@ -88,6 +97,10 @@ public class Player : MonoBehaviour
 	protected virtual void Update()
 	{
 		UpdateInputFromActions();
+
+		characterRotation.SetTarget(moveInput.x * -20f);
+		characterTransform.eulerAngles = new Vector3(0, 0, characterRotation.GetValue());
+		characterRotation.Update(Time.deltaTime);
 	}
 
 	private void UpdateInputFromActions()
