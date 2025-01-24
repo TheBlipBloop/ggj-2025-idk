@@ -189,4 +189,9 @@ public class Player : MonoBehaviour
 	{
 		return gravityScaleByBubbleSize.Evaluate(GetBubbleSize());
 	}
+
+	public Bubble GetBubble()
+	{
+		return bubble;
+	}
 }

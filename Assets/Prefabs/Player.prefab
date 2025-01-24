@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1647000899653394372}
   - component: {fileID: 1713271058075759439}
   - component: {fileID: 952740342608753185}
+  - component: {fileID: 9157696883083716715}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   air: 1
   minAir: 0.2
-  maxAir: 4.5
+  maxAir: 4
   shrinkPerSecond: 0.15
   graphics: {fileID: 1345978893658953213}
   collision: {fileID: 6446917349947269056}
@@ -78,6 +79,33 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  onPop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3905860368173611664}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9157696883083716715}
+        m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1713271058075759439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +241,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &9157696883083716715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905860368173611664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded23cd80c8b2e896801a97712fc68bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1650309132211008926, guid: c4ea946bf8ef9ccc3ae054273cc67303, type: 3}
+  onStart: 0
 --- !u!1 &9148899252362615281
 GameObject:
   m_ObjectHideFlags: 0

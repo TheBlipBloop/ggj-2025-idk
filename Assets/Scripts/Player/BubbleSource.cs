@@ -22,6 +22,10 @@ public class BubbleSource : MonoBehaviour
 		{
 			return;
 		}
+		if (collider2D.transform.parent == null)
+		{
+			return;
+		}
 
 		GameObject playerGameObject = collider2D.transform.parent.gameObject;
 		Bubble bubble = playerGameObject.GetComponent<Bubble>();
@@ -31,6 +35,10 @@ public class BubbleSource : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collider2D)
 	{
 		if (!IsPlayer(collider2D))
+		{
+			return;
+		}
+		if (collider2D.transform.parent == null)
 		{
 			return;
 		}

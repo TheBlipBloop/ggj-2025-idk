@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bubble : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class Bubble : MonoBehaviour
 	[SerializeField]
 	protected AnimationCurve bubbleSizeToGraphicSizeCurve;
 
+	[SerializeField]
+	protected UnityEvent onPop;
+
 	private void Update()
 	{
 		UpdateBubbleAir(GetBubbleAir() - shrinkPerSecond * Time.deltaTime);
@@ -30,15 +34,22 @@ public class Bubble : MonoBehaviour
 
 	public void UpdateBubbleAir(float newAir)
 	{
+		if (air > minAir && newAir <= minAir)
+		{
+			onPop?.Invoke();
+		}
+		if (air < maxAir && newAir >= maxAir)
+		{
+			onPop?.Invoke();
+		}
+
 		air = Mathf.Clamp(newAir, minAir, maxAir);
 
 		float newGraphicSize = GetBubbleRadius() * 2f;
 		graphics.localScale = new Vector3(newGraphicSize, newGraphicSize, 1f);
-
 		collision.localScale = new Vector3(newGraphicSize, newGraphicSize, 1f);
 	}
 
-	// bad names fixme
 	public float GetBubbleAir()
 	{
 		return air;

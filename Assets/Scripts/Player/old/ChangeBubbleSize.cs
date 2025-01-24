@@ -21,7 +21,7 @@ public class ChangeBubbleSize : MonoBehaviour
 		targetBubble = null;
 	}
 
-	public void AddBubbleSize(float amount)
+	public void AddBubbleAir(float amount)
 	{
 		if (amount == 0)
 		{
@@ -31,12 +31,12 @@ public class ChangeBubbleSize : MonoBehaviour
 		targetBubble.UpdateBubbleAir(targetBubble.GetBubbleAir() + amount);
 	}
 
-	public void StartAddingBubbleSize(float amountPerSecond)
+	public void StartAddingBubbleAir(float amountPerSecond)
 	{
 		amountToAddPerSecond = amountPerSecond;
 	}
 
-	public void StopAddingBubbleSize()
+	public void StopAddingBubbleAir()
 	{
 		amountToAddPerSecond = 0;
 	}
@@ -45,7 +45,7 @@ public class ChangeBubbleSize : MonoBehaviour
 	{
 		if (targetBubble)
 		{
-			AddBubbleSize(amountToAddPerSecond);
+			AddBubbleAir(amountToAddPerSecond);
 		}
 	}
 }
