@@ -51,7 +51,7 @@ public class Bubble : MonoBehaviour
 		air = Mathf.Clamp(newAir, minAir, maxAir);
 
 		float newGraphicSize = GetBubbleRadius() * 2f;
-		graphics.localScale = new Vector3(newGraphicSize, newGraphicSize, 1f);
+		graphics.localScale = new Vector3(newGraphicSize, newGraphicSize, 0.5f);
 		collision.localScale = new Vector3(newGraphicSize, newGraphicSize, 1f);
 	}
 

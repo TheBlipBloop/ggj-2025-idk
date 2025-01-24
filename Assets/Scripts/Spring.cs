@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 // MESSY!
 
@@ -17,6 +18,9 @@ public class Spring
 	private float springVelocity = 0f;
 
 	[SerializeField]
+	private float springMaxVelocityMagnitude = 200f;
+
+	[SerializeField]
 	private float springTarget = 0f;
 
 	public void Start()
@@ -33,6 +37,7 @@ public class Spring
 		value += deltaTime * springVelocity;
 
 		springVelocity = Mathf.MoveTowards(springVelocity, 0, springDampening * Time.deltaTime);
+		springVelocity = Mathf.Clamp(springVelocity, -springMaxVelocityMagnitude, springMaxVelocityMagnitude);
 	}
 
 	public void SetTarget(float target)
