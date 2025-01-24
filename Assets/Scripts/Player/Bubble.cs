@@ -32,6 +32,11 @@ public class Bubble : MonoBehaviour
 		UpdateBubbleAir(GetBubbleAir() - shrinkPerSecond * Time.deltaTime);
 	}
 
+	public void AddAir(float amount)
+	{
+		UpdateBubbleAir(GetBubbleAir() + amount);
+	}
+
 	public void UpdateBubbleAir(float newAir)
 	{
 		if (air > minAir && newAir <= minAir)

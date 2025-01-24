@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 9026708225147183295}
   linearForceScale: 8
-  torqueScale: 200
+  torqueScale: 70
 --- !u!58 &4802390583655298738
 CircleCollider2D:
   m_ObjectHideFlags: 0

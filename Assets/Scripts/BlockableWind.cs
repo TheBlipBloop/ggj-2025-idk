@@ -7,6 +7,9 @@ public class BlockableWind : MonoBehaviour
 	protected LayerMask layers;
 
 	[SerializeField]
+	protected float airPerSecond = 1f;
+
+	[SerializeField]
 	protected float windForce = 10f;
 
 	[SerializeField]
@@ -34,12 +37,18 @@ public class BlockableWind : MonoBehaviour
 			{
 				windHits[i].rigidbody.AddForceAtPosition(transform.up * windForce / WIND_ITERATIONS, windHits[i].point);
 			}
+			if (IsPlayer(windHits[i].collider) && windHits[i].collider.transform.parent != null)
+			{
+				Player player = windHits[i].collider.transform.parent.GetComponent<Player>();
+				player.GetBubble().AddAir(airPerSecond * Time.deltaTime / WIND_ITERATIONS);
+				print("asdasdasasd asd ");
+			}
 		}
 	}
 
 	public void OnDrawGizmos()
 	{
-		for (float windOffset = -windWidth / 2f; windOffset < windWidth / 2f; windOffset += windWidth / WIND_ITERATIONS)
+		for (float windOffset = -windWidth / 2f; windOffset <= windWidth / 2f; windOffset += windWidth / (WIND_ITERATIONS - 1))
 		{
 			Vector3 origin = transform.position + transform.right * windOffset;
 			Gizmos.color = Color.green;
@@ -50,7 +59,7 @@ public class BlockableWind : MonoBehaviour
 	protected void WindCast(ref RaycastHit2D[] hits)
 	{
 		int i = 0;
-		for (float windOffset = -windWidth / 2f; windOffset < windWidth / 2f; windOffset += windWidth / WIND_ITERATIONS)
+		for (float windOffset = -windWidth / 2f; windOffset < windWidth / 2f; windOffset += windWidth / (WIND_ITERATIONS - 1))
 		{
 			Vector3 origin = transform.position + transform.right * windOffset;
 			hits[i] = Physics2D.Raycast(origin, transform.up, windLength, layers.value);
@@ -58,8 +67,13 @@ public class BlockableWind : MonoBehaviour
 		}
 	}
 
-	private bool IsPlayer(Collision2D collision2D)
+	private bool IsPlayer(Collider2D collider2D)
 	{
-		return collision2D != null && collision2D.gameObject;//&& collision2D.gameObject.layer == playerLayerMask;
+		return collider2D != null && collider2D.gameObject.layer == 3;
+	}
+
+	protected virtual void EffectPlayer(Player player)
+	{
+
 	}
 }
