@@ -15,6 +15,7 @@ public class PlayerColliisionDetector : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision2D)
 	{
+		print(collision2D.gameObject.name);
 		if (!IsPlayer(collision2D))
 		{
 			return;
