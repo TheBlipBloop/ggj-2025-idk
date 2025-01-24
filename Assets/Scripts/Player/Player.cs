@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
 
 	protected void UpdateGrounded()
 	{
-		RaycastHit2D groundHit = Physics2D.Raycast(body.position, Vector2.down, GetBubbleRadius() + groundCheckDistance, groundMask.value);
+		RaycastHit2D groundHit = Physics2D.CircleCast(body.position, GetBubbleRadius(), Vector2.down, GetBubbleRadius() + groundCheckDistance, groundMask.value);
 
 		if (groundHit.collider)
 		{

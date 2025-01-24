@@ -72,7 +72,7 @@ Material:
     - _MorphTarget_0_Strength: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TextureBalance: 0.213
+    - _TextureBalance: 0.3
     m_Colors:
     - _BubbleLightDirection: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _Fresnel_Color: {r: 0.735849, g: 0.8498801, b: 0.9811321, a: 0}
