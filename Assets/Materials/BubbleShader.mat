@@ -24,12 +24,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BackgroundTexture:
+        m_Texture: {fileID: 8400000, guid: 22290483dcf4cee428138024f38d3413, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5d73068ca71cba44e9b62290998f7192, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_33142ad1c9464913acc8d5e05d4f75d3_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 5d73068ca71cba44e9b62290998f7192, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a6707efd8fb3408795ca80ce0fea8be2_Texture_1_Texture2D:
+        m_Texture: {fileID: 8400000, guid: 22290483dcf4cee428138024f38d3413, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_cfc97399eb814a659e8216773b0ef415_Texture_1_Texture2D:
@@ -64,6 +72,7 @@ Material:
     - _MorphTarget_0_Strength: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _TextureBalance: 0.213
     m_Colors:
     - _BubbleLightDirection: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _Fresnel_Color: {r: 0.735849, g: 0.8498801, b: 0.9811321, a: 0}
