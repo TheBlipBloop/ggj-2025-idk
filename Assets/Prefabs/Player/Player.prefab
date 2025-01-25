@@ -398,7 +398,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_ClearFlags
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

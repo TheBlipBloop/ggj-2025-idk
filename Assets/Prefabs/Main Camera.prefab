@@ -45,8 +45,8 @@ Camera:
   m_GameObject: {fileID: 6942084135810556398}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3794946, g: 0.5402308, b: 0.7985569, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -63,15 +63,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0011764705
-    y: 0.0016286644
-    width: 0.99764705
-    height: 0.99674267
+    x: 0.0012468828
+    y: 0
+    width: 0.99750626
+    height: 0.99813783
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.78125
+  orthographic size: 4.1875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -176,4 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  followSpeed: 35
   offset: {x: 0, y: 0, z: -10}
