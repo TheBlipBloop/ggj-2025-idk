@@ -7,16 +7,17 @@ public class Parallax : MonoBehaviour
 
 	protected Vector2 initialPosition;
 
-	protected
+	protected Camera mainCamera;
 
 	private void Awake()
 	{
 		initialPosition = transform.position;
+		mainCamera = Camera.main;
 	}
 
 	private void Update()
 	{
-
+		// mainCamera.transform.
 	}
 
 }
