@@ -11,9 +11,9 @@ public class ChangeBubbleSize : MonoBehaviour
 		targetBubble = bubble;
 	}
 
-	public void SetBubble(Player player, Bubble bubble)
+	public void SetBubble(Player player)
 	{
-		SetBubble(bubble);
+		SetBubble(player.GetBubble());
 	}
 
 	public void ClearBubble()

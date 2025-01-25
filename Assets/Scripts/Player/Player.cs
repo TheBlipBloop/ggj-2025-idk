@@ -14,11 +14,16 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	protected Bubble bubble;
 
+	[SerializeField]
+	protected SpawnObject deathObject;
+
 	[Header("Input")]
 
 	private InputAction moveAction;
 
 	private InputAction jumpAction;
+
+	private InputAction respawnAction;
 
 	[Header("Movement")]
 
@@ -72,6 +77,12 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	protected AnimationCurve airSpeedScalarByBubbleSize = AnimationCurve.Linear(2f, 1f, 4f, 0.2f);
 
+	[SerializeField]
+	protected AnimationCurve directionChangeSpeedScalarByBubbleSize = AnimationCurve.Linear(1f, 1f, 4f, 0.2f);
+
+	[SerializeField]
+	protected AnimationCurve moveSpeedMaxScalarByBubbleSize = AnimationCurve.Linear(2f, 1f, 3f, 1f);
+
 	[Header("Misc")]
 
 	[SerializeField]
@@ -79,6 +90,9 @@ public class Player : MonoBehaviour
 
 	[SerializeField]
 	protected Spring characterRotation;
+
+	[SerializeField]
+	protected Vector3 checkpointPosition;
 
 	protected virtual void Start()
 	{
@@ -91,6 +105,7 @@ public class Player : MonoBehaviour
 	{
 		moveAction = InputSystem.actions.FindAction("Move");
 		jumpAction = InputSystem.actions.FindAction("Jump");
+		respawnAction = InputSystem.actions.FindAction("Reload");
 	}
 
 	// Update is called once per frame
@@ -101,6 +116,11 @@ public class Player : MonoBehaviour
 		characterRotation.SetTarget(moveInput.x * -20f);
 		characterTransform.eulerAngles = new Vector3(0, 0, characterRotation.GetValue());
 		characterRotation.Update(Time.deltaTime);
+
+		if (respawnAction.ReadValue<float>() > 0.5f)
+		{
+			Die();
+		}
 	}
 
 	private void UpdateInputFromActions()
@@ -125,11 +145,11 @@ public class Player : MonoBehaviour
 
 		if (moveInput.x > 0 != body.linearVelocityX > 0)
 		{
-			moveSpeedScale *= changeDirectionSpeedScalar;
+			moveSpeedScale *= GetBaseDirectionChangeSpeedScalar();
 		}
 
 		body.linearVelocityX += Time.fixedDeltaTime * moveInput.x * GetBaseMoveSpeed() * moveSpeedScale;
-		body.linearVelocityX = Mathf.Clamp(body.linearVelocityX, -maxMoveSpeed, maxMoveSpeed);
+		body.linearVelocityX = Mathf.Clamp(body.linearVelocityX, -GetMaxMoveSpeed(), GetMaxMoveSpeed());
 
 		if (Mathf.Abs(moveInput.x) < 0.1f)
 		{
@@ -146,6 +166,8 @@ public class Player : MonoBehaviour
 		{
 			body.linearVelocityY = jumpForceMin;
 		}
+
+		body.linearVelocityY = Mathf.Min(body.linearVelocityY, jumpForceMax);
 
 		body.gravityScale = GetGravityScale();
 	}
@@ -197,6 +219,16 @@ public class Player : MonoBehaviour
 		return airSpeedScalar * airSpeedScalarByBubbleSize.Evaluate(GetBubbleSize());
 	}
 
+	private float GetBaseDirectionChangeSpeedScalar()
+	{
+		return changeDirectionSpeedScalar * directionChangeSpeedScalarByBubbleSize.Evaluate(GetBubbleSize());
+	}
+
+	private float GetMaxMoveSpeed()
+	{
+		return maxMoveSpeed * moveSpeedMaxScalarByBubbleSize.Evaluate(GetBubbleSize());
+	}
+
 	private float GetGravityScale()
 	{
 		return gravityScaleByBubbleSize.Evaluate(GetBubbleSize());
@@ -210,5 +242,26 @@ public class Player : MonoBehaviour
 	public Rigidbody2D GetBody()
 	{
 		return body;
+	}
+
+
+	// BAD CODE
+	public void Die()
+	{
+		deathObject.Spawn();
+		gameObject.SetActive(false);
+		Game.HandlePlayerDeath();
+	}
+
+	public void SetCheckpointPosition(Vector3 newPosition)
+	{
+		checkpointPosition = newPosition;
+	}
+
+	public void RestoreFromCheckpoint()
+	{
+		gameObject.SetActive(true);
+		transform.position = checkpointPosition;
+		bubble.UpdateBubbleAir(1f);
 	}
 }

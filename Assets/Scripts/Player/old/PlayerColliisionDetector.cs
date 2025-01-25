@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,26 +6,23 @@ public class PlayerColliisionDetector : MonoBehaviour
 {
 
 	[SerializeField]
-	protected UnityEvent<Player, Bubble> playerEnter;
+	protected UnityEvent<Player> playerEnter;
 
 	[SerializeField]
-	protected UnityEvent<Player, Bubble> playerExit;
+	protected UnityEvent<Player> playerExit;
 
 	[SerializeField]
-	protected UnityEvent<Player, Bubble> playerStay;
+	protected UnityEvent<Player> playerStay;
 
 	private void OnCollisionEnter2D(Collision2D collision2D)
 	{
-		print(collision2D.gameObject.name);
 		if (!IsPlayer(collision2D))
 		{
 			return;
 		}
 
 		Player player = collision2D.gameObject.GetComponent<Player>();
-		Bubble bubble = player.GetBubble();
-
-		playerEnter?.Invoke(player, bubble);
+		playerEnter?.Invoke(player);
 	}
 
 	private void OnCollisionExit2D(Collision2D collision2D)
@@ -35,9 +33,7 @@ public class PlayerColliisionDetector : MonoBehaviour
 		}
 
 		Player player = collision2D.gameObject.GetComponent<Player>();
-		Bubble bubble = player.GetBubble();
-
-		playerExit?.Invoke(player, bubble);
+		playerExit?.Invoke(player);
 	}
 
 	private void OnCollisionStay2D(Collision2D collision2D)
@@ -48,9 +44,19 @@ public class PlayerColliisionDetector : MonoBehaviour
 		}
 
 		Player player = collision2D.gameObject.GetComponent<Player>();
-		Bubble bubble = player.GetBubble();
+		playerStay?.Invoke(player);
+	}
 
-		playerStay?.Invoke(player, bubble);
+	private void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.gameObject.layer != 3)
+		{
+			return;
+		}
+
+		Player player = collider.attachedRigidbody.gameObject.GetComponent<Player>();
+
+		playerEnter?.Invoke(player);
 	}
 
 	private bool IsPlayer(Collision2D collision2D)

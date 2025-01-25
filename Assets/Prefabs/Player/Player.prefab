@@ -79,11 +79,11 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 4
       value: 4
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.094239056
+      outSlope: 0.094239056
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.27228224
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -91,21 +91,9 @@ MonoBehaviour:
   onPop:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3905860368173611664}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9157696883083716715}
-        m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
-        m_MethodName: Spawn
+      - m_Target: {fileID: 1713271058075759439}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Die
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -129,13 +117,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 952740342608753185}
   bubble: {fileID: 1647000899653394372}
+  deathObject: {fileID: 9157696883083716715}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   groundCheckDistance: 0.02
   jumpForceMin: 5
   jumpForceMax: 8
-  moveSpeed: 25
+  moveSpeed: 20
   maxMoveSpeed: 10
   changeDirectionSpeedScalar: 2
   airSpeedScalar: 0.75
@@ -155,13 +144,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 4
-      value: 0.1
-      inSlope: -0.41025642
-      outSlope: -0.41025642
+      time: 1
+      value: 1
+      inSlope: -0.5417816
+      outSlope: -0.5417816
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 0.11
+      inSlope: -0.014413858
+      outSlope: -0.014413858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.24022168
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -189,7 +187,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 3
-      value: 0.1
+      value: 0.2
       inSlope: -0.4857143
       outSlope: -0.4857143
       tangentMode: 0
@@ -212,10 +210,58 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 4
+      time: 3.5
       value: 0.1
       inSlope: -0.4
       outSlope: -0.4
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  directionChangeSpeedScalarByBubbleSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4
+      value: 0.1
+      inSlope: -0.26666665
+      outSlope: -0.26666665
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moveSpeedMaxScalarByBubbleSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 2
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 3
+      value: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -231,6 +277,7 @@ MonoBehaviour:
     springVelocity: 0
     springMaxVelocityMagnitude: 200
     springTarget: 0
+  checkpointPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &952740342608753185
 Rigidbody2D:
   serializedVersion: 5
