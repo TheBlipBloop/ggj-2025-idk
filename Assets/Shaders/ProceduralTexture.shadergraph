@@ -3589,8 +3589,8 @@
     "m_ObjectId": "61d3fc1925f44e98b32e11064a7a8b19",
     "m_Title": "Gradient Effect",
     "m_Position": {
-        "x": -1570.0,
-        "y": -2334.0
+        "x": -1570.4000244140625,
+        "y": -2335.199951171875
     }
 }
 
@@ -3677,8 +3677,8 @@
     "m_ObjectId": "6592621e5c0946ee9ab71b88e5de70f4",
     "m_Title": "Voronoi Cells Effect",
     "m_Position": {
-        "x": -1587.0,
-        "y": -957.0
+        "x": -1587.199951171875,
+        "y": -957.5999755859375
     }
 }
 
@@ -4946,8 +4946,8 @@
     "m_ObjectId": "988ec0c26df14f5ea0450abd78e9e4ff",
     "m_Title": "Voronoi Effect",
     "m_Position": {
-        "x": -1589.0,
-        "y": -1587.0
+        "x": -1589.60009765625,
+        "y": -1588.0001220703125
     }
 }
 
@@ -5732,8 +5732,8 @@
     "m_ObjectId": "badc36007df24dfcb0b0c51c68e8c91e",
     "m_Title": "Simple Effect",
     "m_Position": {
-        "x": -1514.0,
-        "y": -3071.0
+        "x": -1514.4000244140625,
+        "y": -3072.0
     }
 }
 
