@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 952740342608753185}
   - component: {fileID: 9157696883083716715}
   m_Layer: 3
-  m_Name: Player
+  m_Name: Player Legacy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,23 +68,14 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.5163487
     - serializedVersion: 3
-      time: 0.85990983
-      value: 1.4161077
-      inSlope: 1.6598003
-      outSlope: 1.6598003
+      time: 1.0349712
+      value: 2.2413871
+      inSlope: 1.4212903
+      outSlope: 1.4212903
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.228183
-    - serializedVersion: 3
-      time: 1.7878094
-      value: 2.7765129
-      inSlope: 0.831248
-      outSlope: 0.831248
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.11942847
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 4
       value: 4
@@ -153,22 +144,13 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1.0086077
-      value: 1.8052803
-      inSlope: -0.6321722
-      outSlope: -0.6321722
+      time: 4
+      value: 0.1
+      inSlope: -0.41025642
+      outSlope: -0.41025642
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.25095472
-    - serializedVersion: 3
-      time: 3.5
-      value: 0.25
-      inSlope: -0.6233444
-      outSlope: -0.6233444
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.9991879
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -178,30 +160,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0.5
-      value: 1.5
-      inSlope: -1.0454228
-      outSlope: -1.0454228
+      value: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.9506228
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: -0.46696886
-      outSlope: -0.46696886
+      inSlope: -0.966873
+      outSlope: -0.966873
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.746142
-      outWeight: 0.5640359
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 3
-      value: 0.2
-      inSlope: -0.40048632
-      outSlope: -0.40048632
+      value: 0.1
+      inSlope: -0.4857143
+      outSlope: -0.4857143
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.99747
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -213,11 +195,11 @@ MonoBehaviour:
       time: 2
       value: 1
       inSlope: 0
-      outSlope: -0.44069013
-      tangentMode: 1
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.91253376
+      outWeight: 0
     - serializedVersion: 3
       time: 4
       value: 0.1
@@ -237,16 +219,16 @@ MonoBehaviour:
       time: 1
       value: 1
       inSlope: 0
-      outSlope: 0
+      outSlope: -0.26666665
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 3
-      value: 0.5
+      time: 4
+      value: 0.2
       inSlope: -0.26666665
-      outSlope: -0.26666665
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
