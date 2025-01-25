@@ -1,11 +1,10 @@
-using UnityEditor.Compilation;
 using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-	protected static Player player;
+	private static Player player;
 
-	protected static Game instance;
+	private static Game instance;
 
 	[SerializeField]
 	protected float respawnTime = 3f;
