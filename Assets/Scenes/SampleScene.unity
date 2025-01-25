@@ -1281,7 +1281,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1436661571
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5465,11 +5465,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 549151716560231661, guid: ecf13513135d60086bc00aac711f307a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.012
+      value: 4.943
       objectReference: {fileID: 0}
     - target: {fileID: 549151716560231661, guid: ecf13513135d60086bc00aac711f307a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.675
+      value: -0.685
       objectReference: {fileID: 0}
     - target: {fileID: 549151716560231661, guid: ecf13513135d60086bc00aac711f307a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5605,7 +5605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.81
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5613,7 +5613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5625,7 +5625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.38268343
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5637,7 +5637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008845133876942183, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065541018675511376, guid: 06c22cbf8e2820e5f850f59651a78008, type: 3}
       propertyPath: m_Name
@@ -5695,30 +5695,6 @@ PrefabInstance:
     - target: {fileID: 2028770793252704585, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4150055875042706263, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: followSpeed
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: orthographic size
-      value: 3.984375
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145543927184490082, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6942084135810556398, guid: 28fa00c1d24fd4292a561359df77b7a0, type: 3}
       propertyPath: m_Name

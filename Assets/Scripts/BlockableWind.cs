@@ -18,7 +18,7 @@ public class BlockableWind : MonoBehaviour
 	[SerializeField]
 	protected float windWidth = 1.0f;
 
-	const int WIND_ITERATIONS = 3;
+	const int WIND_ITERATIONS = 6;
 
 	RaycastHit2D[] windHits;
 

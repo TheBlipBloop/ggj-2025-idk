@@ -44,6 +44,12 @@ TagManager:
   - name: Lights
     uniqueID: 228988667
     locked: 0
+  - name: Background Elements
+    uniqueID: 3333987971
+    locked: 0
+  - name: Floor
+    uniqueID: 189203045
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
