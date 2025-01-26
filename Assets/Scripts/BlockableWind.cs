@@ -36,7 +36,7 @@ public class BlockableWind : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		line.material.SetTextureOffset("_MainTex", Vector2.right * Time.time * windForce);
+		// line.sharedMaterial.SetTextureOffset("_MainTex", Vector2.right * Time.time * windForce);
 
 		WindCast(ref windHits);
 		for (int i = 0; i < windHits.Length; i++)

@@ -66,13 +66,13 @@ Material:
     - _BubbleHeight: 1
     - _BubbleTextureSpeed: 0
     - _BubbleWidth: 1
-    - _Color_Contrast: 0.38
+    - _Color_Contrast: 0.5
     - _Fresnel_Effect: 1.38
     - _MorphTarget_0_Size: 1.7
     - _MorphTarget_0_Strength: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TextureBalance: 0.3
+    - _TextureBalance: 0.37
     m_Colors:
     - _BubbleLightDirection: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _Fresnel_Color: {r: 0.735849, g: 0.8498801, b: 0.9811321, a: 0}

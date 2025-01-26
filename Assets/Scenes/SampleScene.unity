@@ -58014,6 +58014,18 @@ PrefabInstance:
       value: Wind (Grow)
       objectReference: {fileID: 0}
     - target: {fileID: 7316424177874716899, guid: 2d989a1383743fd0dba4c47f96710ad0, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316424177874716899, guid: 2d989a1383743fd0dba4c47f96710ad0, type: 3}
+      propertyPath: m_Parameters.textureScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316424177874716899, guid: 2d989a1383743fd0dba4c47f96710ad0, type: 3}
+      propertyPath: m_Positions.Array.data[1].y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316424177874716899, guid: 2d989a1383743fd0dba4c47f96710ad0, type: 3}
       propertyPath: m_Parameters.colorGradient.atime1
       value: 58982
       objectReference: {fileID: 0}
