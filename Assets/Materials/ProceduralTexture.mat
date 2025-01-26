@@ -38,7 +38,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _SWITCH_GRADIENT
+  - _SWITCH_V_CELLS
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -46,7 +46,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Simple_Step
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -70,14 +70,14 @@ Material:
     m_Floats:
     - _Alpha: 0
     - _Cell_Angle: 2
-    - _Cell_Contrast: 0.15
-    - _Cell_Scale: 10
-    - _Cell_Step: 0.9
+    - _Cell_Contrast: 0.05
+    - _Cell_Scale: -79.93
+    - _Cell_Step: 0.79
     - _Gradient_Contrast: 1
     - _Gradient_Scale: 10
     - _Gradient_Step: 0.5
     - _Pattern_Rotate: 0
-    - _SWITCH: 1
+    - _SWITCH: 3
     - _Simple_Contrast: 0
     - _Simple_Scale: 25
     - _Simple_Step: 0.5
@@ -87,7 +87,7 @@ Material:
     - _Voronoi_Scale: 10
     - _Voronoi_Step: 0.5
     m_Colors:
-    - _Cell_Color: {r: 1, g: 0, b: 0, a: 0}
+    - _Cell_Color: {r: 0.48482126, g: 0.3492609, b: 0.3492609, a: 0}
     - _Cell_Color_2: {r: 0, g: 1, b: 0.28291553, a: 0}
     - _Gradient_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Gradient_Color_2: {r: 0, g: 0, b: 0, a: 0}
