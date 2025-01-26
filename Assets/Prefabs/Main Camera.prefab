@@ -114,14 +114,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0.0012269939
-    y: 0.0017152659
+    y: 0
     width: 0.996319
-    height: 0.9948542
+    height: 0.9979035
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.0625
+  orthographic size: 7.4375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -227,4 +227,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   followSpeed: 35
+  mouseLookDistance: 0.1
   offset: {x: 0, y: 0, z: -10}
