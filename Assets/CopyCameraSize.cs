@@ -23,5 +23,6 @@ public class CopyCameraSize : MonoBehaviour
     {
         self.orthographicSize = target.orthographicSize;
         self.backgroundColor = target.backgroundColor;
+        transform.position = target.transform.position;
     }
 }

@@ -1216,8 +1216,8 @@
     "m_ObjectId": "0291af50dd424de9a007b5276ffb8c9b",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -1336.80029296875,
-        "y": 952.0001220703125
+        "x": -1336.0,
+        "y": 953.0
     }
 }
 
@@ -1327,8 +1327,8 @@
     "m_ObjectId": "08533fa3703347bcaff10508c8cbe611",
     "m_Title": "ouchie",
     "m_Position": {
-        "x": -1437.6002197265625,
-        "y": 1579.2000732421875
+        "x": -1437.0,
+        "y": 1580.0
     }
 }
 
@@ -1868,7 +1868,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "IORMedium",
     "m_StageCapability": 3,
-    "m_Value": 1.350000023841858,
+    "m_Value": 1.5,
     "m_DefaultValue": 1.5,
     "m_Labels": []
 }
@@ -5260,8 +5260,8 @@
     "m_ObjectId": "aa50bd95f5e7488aa520c2bda04e5bbe",
     "m_Title": "Bubble Shape",
     "m_Position": {
-        "x": -3332.80029296875,
-        "y": -1308.0001220703125
+        "x": -3332.0,
+        "y": -1307.0
     }
 }
 
@@ -6477,8 +6477,8 @@
     "m_ObjectId": "cb0bc1724bcd499c8d18b3cd63b45a91",
     "m_Title": "Texture",
     "m_Position": {
-        "x": -3023.2001953125,
-        "y": -239.2002410888672
+        "x": -3023.0,
+        "y": -238.0
     }
 }
 

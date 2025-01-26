@@ -12,12 +12,10 @@ public class Pauser : MonoBehaviour
 	public void Pause()
 	{
 		Time.timeScale = 0f;
-		pauseMenu.SetActive(true);
 	}
 
 	public void Unpause()
 	{
 		Time.timeScale = 1f;
-		pauseMenu.SetActive(false);
 	}
 }
