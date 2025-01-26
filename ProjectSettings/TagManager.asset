@@ -41,10 +41,10 @@ TagManager:
   - name: Background
     uniqueID: 1436661571
     locked: 0
-  - name: Lights
+  - name: Background Detail
     uniqueID: 228988667
     locked: 0
-  - name: Background Elements
+  - name: Gameplay Elements (Background)
     uniqueID: 3333987971
     locked: 0
   - name: Floor
