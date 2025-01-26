@@ -93,6 +93,8 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	protected Vector3 checkpointPosition;
 
+	protected bool disableJumpCuttingWhileInAir;
+
 	protected virtual void Start()
 	{
 		BindInputActions();
@@ -161,7 +163,7 @@ public class Player : MonoBehaviour
 			lastJumpTime = float.NegativeInfinity;
 		}
 
-		if (CanceledJump() && body.linearVelocityY > jumpForceMin)
+		if (CanceledJump() && body.linearVelocityY > jumpForceMin && !disableJumpCuttingWhileInAir)
 		{
 			body.linearVelocityY = jumpForceMin;
 		}
@@ -178,6 +180,7 @@ public class Player : MonoBehaviour
 		if (groundHit.collider)
 		{
 			lastGroundedTime = Time.time;
+			disableJumpCuttingWhileInAir = false;
 		}
 	}
 
@@ -241,6 +244,11 @@ public class Player : MonoBehaviour
 	public Rigidbody2D GetBody()
 	{
 		return body;
+	}
+
+	public void DisableJumpCuttingUntilGrounded()
+	{
+		disableJumpCuttingWhileInAir = true;
 	}
 
 

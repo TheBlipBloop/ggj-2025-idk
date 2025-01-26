@@ -8,5 +8,6 @@ public class BouncePlayer : MonoBehaviour
 	public void Bounce(Player player)
 	{
 		player.GetBody().AddForce(transform.up * force, ForceMode2D.Impulse);
+		player.DisableJumpCuttingUntilGrounded();
 	}
 }
