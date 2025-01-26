@@ -31,6 +31,12 @@ public class CameraFollow : MonoBehaviour
 		// mouseOffset = Vector3.ClampMagnitude(mouseOffset, mouseLookDistance);
 
 
+		if (Vector3.Distance(targetPosition, transform.position) > 200)
+		{
+			transform.position = Vector3.Lerp(targetPosition, mousePosition, mouseLookWeight);
+
+		}
+
 
 		transform.position = Vector3.MoveTowards(transform.position, Vector3.Lerp(targetPosition, mousePosition, mouseLookWeight), Time.deltaTime * followSpeed);
 	}
