@@ -51,7 +51,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 73
-  airPerSecond: 1
+  airPerSecond: 2.5
   windForce: 10
   windLength: 6
   windWidth: 2.5
