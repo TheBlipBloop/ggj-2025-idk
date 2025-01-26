@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 544796067701129442}
   - component: {fileID: 4155080954966980284}
   - component: {fileID: 6246823357328620187}
+  - component: {fileID: 8437190185439302454}
   m_Layer: 0
   m_Name: AmbientParticles
   m_TagString: Untagged
@@ -4833,6 +4834,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8437190185439302454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451682359980437508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9088a4fbffdafbd9bfaa4b8095988c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3905860368173611664
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,26 +5312,6 @@ PrefabInstance:
     - target: {fileID: 6708300167154525267, guid: 0e3defe5154322289a96c6053820605f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726912740044411899, guid: 0e3defe5154322289a96c6053820605f, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
