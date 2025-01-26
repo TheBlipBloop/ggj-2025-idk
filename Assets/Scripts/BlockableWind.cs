@@ -4,6 +4,9 @@ using UnityEngine.Events;
 public class BlockableWind : MonoBehaviour
 {
 	[SerializeField]
+	protected LineRenderer line;
+
+	[SerializeField]
 	protected LayerMask layers;
 
 	[SerializeField]
@@ -25,11 +28,16 @@ public class BlockableWind : MonoBehaviour
 	void Awake()
 	{
 		windHits = new RaycastHit2D[WIND_ITERATIONS];
+		line.SetPosition(0, transform.position);
+		line.SetPosition(1, transform.position + transform.up * windLength);
+		line.widthMultiplier = windWidth;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		line.material.SetTextureOffset("_MainTex", Vector2.right * Time.time * windForce);
+
 		WindCast(ref windHits);
 		for (int i = 0; i < windHits.Length; i++)
 		{
