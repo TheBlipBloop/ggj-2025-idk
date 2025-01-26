@@ -145,6 +145,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -447,7 +473,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soap_sheet_0: -7399407777409495419
+      soap_sheet_1: 8582403982954310931
+      soap_sheet_10: 8348015010163853028
+      soap_sheet_11: 6714094522034258279
+      soap_sheet_12: -2179421699956614476
+      soap_sheet_2: -4194857085724128652
+      soap_sheet_3: -901576764056923353
+      soap_sheet_4: 7550751931904975289
+      soap_sheet_5: -7253037767585535184
+      soap_sheet_6: -8046714299714039617
+      soap_sheet_7: 8684223646206576063
+      soap_sheet_8: -3193579965975946762
+      soap_sheet_9: -7847112524229303464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

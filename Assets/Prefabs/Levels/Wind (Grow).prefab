@@ -52,7 +52,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 73
   airPerSecond: 2.5
-  windForce: 10
+  windForce: 50
   windLength: 6
   windWidth: 2.5
 --- !u!1 &4764786035058536849
