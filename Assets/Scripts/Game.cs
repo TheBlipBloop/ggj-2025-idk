@@ -6,12 +6,15 @@ public class Game : MonoBehaviour
 
 	private static Game instance;
 
+	protected int deaths = 0;
+
 	[SerializeField]
 	protected float respawnTime = 3f;
 
 	void Awake()
 	{
 		instance = this;
+		deaths = 0;
 		player = FindFirstObjectByType<Player>();
 	}
 
@@ -20,12 +23,18 @@ public class Game : MonoBehaviour
 	{
 		// Repsawn after a delay
 		instance.Invoke("RespawnPlayer", instance.respawnTime);
+		instance.deaths++;
 	}
 
 	protected void RespawnPlayer()
 	{
 		CancelInvoke();
 		player.RestoreFromCheckpoint();
+	}
+
+	public static int GetDeathCount()
+	{
+		return instance.deaths;
 	}
 
 }
