@@ -1078,8 +1078,8 @@
     "m_ObjectId": "0291af50dd424de9a007b5276ffb8c9b",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -1336.800048828125,
-        "y": 952.0000610351563
+        "x": -1336.0001220703125,
+        "y": 953.0000610351563
     }
 }
 
@@ -2958,7 +2958,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Smoothness",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": 0.0,
     "m_DefaultValue": 0.5,
     "m_Labels": []
 }
@@ -4200,7 +4200,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Metallic",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -4638,8 +4638,8 @@
     "m_ObjectId": "aa50bd95f5e7488aa520c2bda04e5bbe",
     "m_Title": "Bubble Shape",
     "m_Position": {
-        "x": -2775.199951171875,
-        "y": -1295.9998779296875
+        "x": -2775.0,
+        "y": -1295.0
     }
 }
 
@@ -5835,8 +5835,8 @@
     "m_ObjectId": "cb0bc1724bcd499c8d18b3cd63b45a91",
     "m_Title": "Texture",
     "m_Position": {
-        "x": -3023.199951171875,
-        "y": -239.2000732421875
+        "x": -3023.000244140625,
+        "y": -238.00003051757813
     }
 }
 

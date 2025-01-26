@@ -42,7 +42,7 @@ public class BubbleGraphics : MonoBehaviour
 		float radius = transform.lossyScale.x * radiusScale;
 
 		morphSpringX.SetTarget(transform.position.x);
-		if (player.OnGround())
+		if (player && player.OnGround())
 		{
 			morphSpringY.SetTarget(transform.position.y + radius / 3f);
 		}
