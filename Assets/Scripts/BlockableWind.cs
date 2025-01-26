@@ -41,15 +41,22 @@ public class BlockableWind : MonoBehaviour
 		WindCast(ref windHits);
 		for (int i = 0; i < windHits.Length; i++)
 		{
-			if (windHits[i].rigidbody)
-			{
-				windHits[i].rigidbody.AddForceAtPosition(transform.up * windForce / WIND_ITERATIONS, windHits[i].point);
-				// windHits[i].rigidbody.AddForce(windHits[i].rigidbody.gravityScale * -Physics2D.gravity);
-			}
 			if (IsPlayer(windHits[i].collider) && windHits[i].collider.transform.parent != null)
 			{
 				Player player = windHits[i].collider.transform.parent.GetComponent<Player>();
 				player.GetBubble().AddAir(airPerSecond * Time.deltaTime / WIND_ITERATIONS);
+			}
+		}
+	}
+
+	void FixedUpdate()
+	{
+		for (int i = 0; i < windHits.Length; i++)
+		{
+			if (windHits[i].rigidbody)
+			{
+				windHits[i].rigidbody.AddForceAtPosition(transform.up * windForce / WIND_ITERATIONS, windHits[i].point);
+				// windHits[i].rigidbody.AddForce(windHits[i].rigidbody.gravityScale * -Physics2D.gravity);
 			}
 		}
 	}
