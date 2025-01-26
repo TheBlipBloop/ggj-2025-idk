@@ -87,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 38
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,32 +145,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -180,7 +154,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 76
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,9 +174,9 @@ TextureImporter:
       name: soap_sheet_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 38
         y: 0
-        width: 37
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -222,9 +196,9 @@ TextureImporter:
       name: soap_sheet_2
       rect:
         serializedVersion: 2
-        x: 115
+        x: 76
         y: 0
-        width: 34
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,9 +218,9 @@ TextureImporter:
       name: soap_sheet_3
       rect:
         serializedVersion: 2
-        x: 154
+        x: 114
         y: 0
-        width: 31
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,9 +240,9 @@ TextureImporter:
       name: soap_sheet_4
       rect:
         serializedVersion: 2
-        x: 195
+        x: 152
         y: 0
-        width: 23
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -288,9 +262,9 @@ TextureImporter:
       name: soap_sheet_5
       rect:
         serializedVersion: 2
-        x: 237
+        x: 190
         y: 0
-        width: 17
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,9 +284,9 @@ TextureImporter:
       name: soap_sheet_6
       rect:
         serializedVersion: 2
-        x: 280
+        x: 228
         y: 0
-        width: 10
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -332,9 +306,9 @@ TextureImporter:
       name: soap_sheet_7
       rect:
         serializedVersion: 2
-        x: 316
+        x: 266
         y: 0
-        width: 17
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -354,9 +328,9 @@ TextureImporter:
       name: soap_sheet_8
       rect:
         serializedVersion: 2
-        x: 352
+        x: 304
         y: 0
-        width: 23
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -376,9 +350,9 @@ TextureImporter:
       name: soap_sheet_9
       rect:
         serializedVersion: 2
-        x: 385
+        x: 342
         y: 0
-        width: 31
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -398,9 +372,9 @@ TextureImporter:
       name: soap_sheet_10
       rect:
         serializedVersion: 2
-        x: 421
+        x: 380
         y: 0
-        width: 34
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -420,9 +394,9 @@ TextureImporter:
       name: soap_sheet_11
       rect:
         serializedVersion: 2
-        x: 457
+        x: 418
         y: 0
-        width: 37
+        width: 38
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -442,7 +416,7 @@ TextureImporter:
       name: soap_sheet_12
       rect:
         serializedVersion: 2
-        x: 494
+        x: 456
         y: 0
         width: 38
         height: 22
@@ -460,11 +434,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: soap_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b84b86ee8a66dc989ffd83cdb3a6d34
+      internalID: -69535921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 83423cb1a31092a3fa307116be1189e7
     internalID: 0
     vertices: []
     indices: 
@@ -479,6 +475,7 @@ TextureImporter:
       soap_sheet_10: 8348015010163853028
       soap_sheet_11: 6714094522034258279
       soap_sheet_12: -2179421699956614476
+      soap_sheet_13: -69535921
       soap_sheet_2: -4194857085724128652
       soap_sheet_3: -901576764056923353
       soap_sheet_4: 7550751931904975289
